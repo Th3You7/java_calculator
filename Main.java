@@ -22,8 +22,26 @@ class Main {
     
     private static void sum(int a, int b) {
         int res = a + b;
-
         System.out.println(res);
+    }
+
+    private static void minus(int a, int b) {
+        int res = a - b;
+        System.out.println(res);
+    }
+
+    private static void multiply(int a, int b) {
+        int res = a * b;
+        System.out.println(res);
+    }
+
+    private static void divide(int a, int b) {
+        try {
+            int res = a / b;
+        System.out.println(res);
+        } catch (ArithmeticException e) {
+            System.out.println("=> Error: " + e.getMessage());
+        }
     }
 
     public static void main(String[] args) {
@@ -59,7 +77,19 @@ class Main {
                 case 1:
                     sum(x, y);
                     break;
-             
+
+                case 2:
+                    minus(x, y);
+                    break;
+
+                case 3:
+                    multiply(x, y);
+                    break;
+
+                case 4:
+                    divide(x, y);
+                    break;
+
                 default:
                     System.out.println("*** Invalid choice!! ***");
              }
